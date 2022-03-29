@@ -95,6 +95,44 @@ public class Test {
 		 * objekte kreirati samostalno.
 		 */
 
+		Circle k = new Circle();
+		Line lin = new Line();
+		Point p1 = new Point();
+		Point p2 = new Point();
+
+		k.setCenter(p1);
+		lin.setStartPoint(p1);
+		lin.setEndPoint(p2);
+
+		k.getCenter().setX(
+				k.getRadius() + (int) lin.getStartPoint().distance(lin.getEndPoint().getX(), lin.getEndPoint().getY()));
+
+		// inicijalne vrednosti
+		Point p3 = new Point(10, 15);
+		// prilikom promene
+		p3.setX(5);
+
+		System.out.println(p3);
+		System.out.println(p3.toString());
+		System.out.println(lin.toString());
+
+		Point p4 = new Point(20, 25);
+		Point p5 = new Point(20, 25);
+
+		// jednakost po referenci - vraca false
+		System.out.println(p4 == p5);
+		// poredi po vrednosti tek kad se redefinise
+		System.out.println(p4.equals(p5));
+
+		// dodela vrednosti i reference
+		p4 = p5;
+		
+
+		// jednakost po referenci - vraca true
+		System.out.println(p4 == p5);
+		// poredi po vrednosti tek kad se redefinise
+		System.out.println(p4.equals(p5));
+
 	}
 
 }
