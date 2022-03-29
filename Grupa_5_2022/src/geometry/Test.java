@@ -133,6 +133,7 @@ public class Test {
 		// poredi po vrednosti tek kad se redefinise
 		System.out.println(p4.equals(p5));
 
+		//ZADATAK - testirati konstruktore, toString() i equals(...) metode
 	}
 
 }
