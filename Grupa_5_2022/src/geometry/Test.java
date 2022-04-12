@@ -134,6 +134,17 @@ public class Test {
 		System.out.println(p4.equals(p5));
 
 		//ZADATAK - testirati konstruktore, toString() i equals(...) metode
+		
+		//Vezbe 5
+		Point clickPoint = new Point(20,25);
+		System.out.println(p5.contains(clickPoint));
+		System.out.println(p5.contains(clickPoint.getX(), clickPoint.getY()));
+		System.out.println(k.contains(clickPoint));
+		
+		Donut donut1 = new Donut (clickPoint, 20, 10, true);
+		Donut donut2 = new Donut (clickPoint, 15, 10, true);
+		System.out.println(donut1.equals(donut2));
+		System.out.println(donut1);
 	}
 
 }

@@ -36,6 +36,14 @@ public class Point {
 		}
 		return false;
 	}
+	
+	public boolean contains(int x, int y) {
+		return this.distance(x, y) <= 2;
+	}
+	
+	public boolean contains(Point clickPoint) {
+		return this.distance(clickPoint.x, clickPoint.getY()) <= 2;
+	}
 
 	public double distance(int xPoint2, int yPoint2) {
 		double dx = this.x - xPoint2;

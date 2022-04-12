@@ -29,6 +29,17 @@ public class Line {
 		} else
 			return false;
 	}
+	
+	public boolean contains(int x, int y) {
+		return this.startPoint.distance(x, y) + 
+				this.endPoint.distance(x, y) - length()<= 2;
+	}
+	
+	public boolean contains(Point clickPoint) {
+		return this.startPoint.distance(clickPoint.getX(), clickPoint.getY()) + 
+				this.endPoint.distance(clickPoint.getX(), clickPoint.getY()) 
+					- length()<= 2;
+	}
 
 	public Point getStartPoint() {
 		return this.startPoint; // ne sme poziv metode
