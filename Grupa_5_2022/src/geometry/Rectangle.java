@@ -55,6 +55,25 @@ public class Rectangle extends Shape{
 	public int circumference() {
 		return 2 * (width + height);
 	}
+	
+	@Override
+	public void moveTo(int x, int y) {
+		upperLeftPoint.moveTo(x, y);
+	}
+	
+	@Override
+	public void moveBy(int byX, int byY) {
+		upperLeftPoint.moveBy(byX, byY);
+	}
+	
+	@Override
+	public int compareTo(Object obj) {
+		if (obj instanceof Rectangle) {
+			Rectangle shapeToCompare = (Rectangle) obj;
+			return this.area() - shapeToCompare.area();
+		}
+		return 0;
+	}
 
 	public int getWidth() {
 		return width;

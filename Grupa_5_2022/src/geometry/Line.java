@@ -39,6 +39,27 @@ public class Line extends Shape {
 		return this.startPoint.distance(clickPoint.getX(), clickPoint.getY())
 				+ this.endPoint.distance(clickPoint.getX(), clickPoint.getY()) - length() <= 2;
 	}
+	
+	@Override
+	public void moveTo(int x, int y) {
+		startPoint.moveTo(x, y);
+		endPoint.moveTo(x, y);
+	}
+	
+	@Override
+	public void moveBy(int byX, int byY) {
+		startPoint.moveBy(byX, byY);
+		endPoint.moveBy(byX, byY);
+	}
+	
+	@Override
+	public int compareTo(Object obj) {
+		if (obj instanceof Line) {
+			Line shapeToCompare = (Line) obj;
+			return (int) (this.length() - shapeToCompare.length());
+		}
+		return 0;
+	}
 
 	public Point getStartPoint() {
 		return this.startPoint; // ne sme poziv metode
