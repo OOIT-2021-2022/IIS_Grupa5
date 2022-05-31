@@ -161,7 +161,7 @@ public class PrviZadatak extends JFrame {
 		scrollPane.setViewportView(list);
 		list.setModel(dlm);
 		
-		JButton btnKlik = new JButton("Klikni me");
+		JButton btnKlik = new JButton("Klikni");
 		btnKlik.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane.showMessageDialog(null, "Antistres dugme :)",
